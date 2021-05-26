@@ -1,3 +1,14 @@
 body {
     background-color: lightcyan;
 }
+
+.boton {
+    font-variant: small-caps;
+    font-weight: bold;
+    color: lightgreen;
+}
+
+.seccion a {
+    color: green;
+    text-decoration: underline;
+}

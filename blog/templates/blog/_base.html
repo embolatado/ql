@@ -34,7 +34,13 @@
     <link rel="stylesheet" href="{% static 'blog/css/estilos.css' %}" type="text/css">
 </head>
 <body>
-    
+    <nav>
+        <ul>
+            <li class="boton {% if request.path == '/blog/' %}seccion{% endif %}"><a href="{% url 'blog-index' %}">blog</a></li>
+            <li class="boton {% if request.path == '/blog/about/' %}seccion{% endif %}"><a href="{% url 'blog-about' %}">acerca de</a></li>
+        </ul>
+    </nav>
+
     <!-- CONTENIDO -->
     {% block content %}
 
