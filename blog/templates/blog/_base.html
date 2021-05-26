@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Dynamic Title -->
+    {% if titulo %}
+        <title>Hola, {{ titulo }}</title>
+    {% else %}
+        <title>Hola, mundo</title>
+    {% endif %}
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Título Página" />
+    <meta property="og:description" content="Lorem ipsum dolor sit amet." />
+    <meta property="og:image" content="{% static 'blog/img/social.jpg' %}" />
+    <meta property="og:url" content="http://website.net/" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@embolatado" />
+    <meta name="twitter:title" content="Twitter Título" />
+    <meta name="twitter:description" content="Twitter desc lorem sit amet." />
+    <meta name="twitter:image" content="{% static 'blog/img/social.jpg' %}" />
+    
+    <!-- iOS -->
+    <link rel="icon" type="image/png" href="{% static 'blog/img/favicon.png' %}" />
+    <link rel="apple-touch-icon" href="{% static 'blog/img/apple-touch-icon.png' %}">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'blog/css/estilos.css' %}" type="text/css">
+</head>
+<body>
+    
+    <!-- CONTENIDO -->
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>
